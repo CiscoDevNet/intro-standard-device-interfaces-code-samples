@@ -18,7 +18,7 @@ HOST = 'ios-xe-mgmt.cisco.com'
 PORT = 10000
 # use the user credentials for your CSR1000V device
 USER = 'root'
-PASS = 'C!sc0123'
+PASS = 'D_Vay!_10&'
 # XML file to open
 FILE = 'get_interfaces.xml'
 

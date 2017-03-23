@@ -12,7 +12,7 @@ HOST = 'ios-xe-mgmt.cisco.com'
 PORT = 10000
 # use the user credentials for your IOS-XE device
 USER = 'root'
-PASS = 'C!sc0123'
+PASS = 'D_Vay!_10&'
 
 
 # create a main() method
