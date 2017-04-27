@@ -29,13 +29,16 @@ def main():
                          allow_agent=False, look_for_keys=False) as m:
 
         # XML filter to issue with the get operation
+        # IOS-XE pre-16.2     YANG model called urn:ios
+        # IOS-XE 16.2 - 16.4  YANG model called http://cisco.com/ns/yang/ned/ios
+        # IOS-XE 16.5+        YANG model called http://cisco.com/ns/yang/Cisco-IOS-XE-native
         hostname_filter = '''
                           <filter>
-                              <native xmlns="urn:ios">
+                              <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
                                   <hostname></hostname>
                               </native>
                           </filter>
-                          '''
+                          '''                             
         result = m.get_config('running', hostname_filter)
         xml_doc = xml.dom.minidom.parseString(result.xml)
         hostname = xml_doc.getElementsByTagName("hostname")
